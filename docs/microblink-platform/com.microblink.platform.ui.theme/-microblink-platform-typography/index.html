@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>MicroblinkPlatformTypography</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="../../../index.html">
+                    microblink-platform
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":microblink-platform:dokkaHtml/release">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":microblink-platform:dokkaHtml/release"
+                                       data-filter=":microblink-platform:dokkaHtml/release"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    microblink-platform
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="microblink-platform::com.microblink.platform.ui.theme/MicroblinkPlatformTypography///PointingToDeclaration//-275453720">
+  <div class="breadcrumbs"><a href="../../../index.html">microblink-platform</a><span class="delimiter">/</span><a href="../index.html">com.microblink.platform.ui.theme</a><span class="delimiter">/</span><span class="current">MicroblinkPlatformTypography</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Microblink</span><wbr></wbr><span>Platform</span><wbr></wbr><span><span>Typography</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-platform:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/compose/runtime/Immutable.html"><span class="token annotation builtin">Immutable</span></a></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">MicroblinkPlatformTypography</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>homeTitle<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>homeSubtitle<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>homeStepTitle<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>homeStepSubtitle<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>homeStepStatus<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>homeConditionalWarning<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>textButton<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>faceCaptureStatus<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>cameraPermissionTitle<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>cameraPermissionSubtitle<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>errorTitle<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>errorSubtitle<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>loadingTitle<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>resultTitle<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>resultSubtitle<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a></span></span><span class="token punctuation">)</span></div><p class="paragraph">Defines the typography used in the Microblink Platform UI.</p><p class="paragraph">This data class specifies the text styles for various UI elements in the verification flow, such as headlines, labels, body text, and titles. It provides a consistent look and feel throughout the UI.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-963003968%2FConstructors%2F-275453720" anchor-label="MicroblinkPlatformTypography" id="-963003968%2FConstructors%2F-275453720" data-filterable-set=":microblink-platform:dokkaHtml/release"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":microblink-platform:dokkaHtml/release" data-filterable-set=":microblink-platform:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-microblink-platform-typography.html"><span>Microblink</span><wbr></wbr><span>Platform</span><wbr></wbr><span><span>Typography</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-963003968%2FConstructors%2F-275453720"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-platform:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">homeTitle<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a><span class="token punctuation">, </span></span><span class="parameter ">homeSubtitle<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a><span class="token punctuation">, </span></span><span class="parameter ">homeStepTitle<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a><span class="token punctuation">, </span></span><span class="parameter ">homeStepSubtitle<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a><span class="token punctuation">, </span></span><span class="parameter ">homeStepStatus<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a><span class="token punctuation">, </span></span><span class="parameter ">homeConditionalWarning<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a><span class="token punctuation">, </span></span><span class="parameter ">textButton<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a><span class="token punctuation">, </span></span><span class="parameter ">faceCaptureStatus<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a><span class="token punctuation">, </span></span><span class="parameter ">cameraPermissionTitle<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a><span class="token punctuation">, </span></span><span class="parameter ">cameraPermissionSubtitle<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a><span class="token punctuation">, </span></span><span class="parameter ">errorTitle<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a><span class="token punctuation">, </span></span><span class="parameter ">errorSubtitle<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a><span class="token punctuation">, </span></span><span class="parameter ">loadingTitle<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a><span class="token punctuation">, </span></span><span class="parameter ">resultTitle<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a><span class="token punctuation">, </span></span><span class="parameter ">resultSubtitle<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-133969205%2FClasslikes%2F-275453720" anchor-label="Companion" id="-133969205%2FClasslikes%2F-275453720" data-filterable-set=":microblink-platform:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-platform:dokkaHtml/release" data-filterable-set=":microblink-platform:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-133969205%2FClasslikes%2F-275453720"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-platform:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div><div class="brief "><p class="paragraph">A companion object that provides a default typography for the Microblink Platform UI.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-379857526%2FProperties%2F-275453720" anchor-label="cameraPermissionSubtitle" id="-379857526%2FProperties%2F-275453720" data-filterable-set=":microblink-platform:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-platform:dokkaHtml/release" data-filterable-set=":microblink-platform:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="camera-permission-subtitle.html"><span>camera</span><wbr></wbr><span>Permission</span><wbr></wbr><span><span>Subtitle</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-379857526%2FProperties%2F-275453720"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-platform:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="camera-permission-subtitle.html">cameraPermissionSubtitle</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="175805344%2FProperties%2F-275453720" anchor-label="cameraPermissionTitle" id="175805344%2FProperties%2F-275453720" data-filterable-set=":microblink-platform:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-platform:dokkaHtml/release" data-filterable-set=":microblink-platform:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="camera-permission-title.html"><span>camera</span><wbr></wbr><span>Permission</span><wbr></wbr><span><span>Title</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="175805344%2FProperties%2F-275453720"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-platform:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="camera-permission-title.html">cameraPermissionTitle</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-953496636%2FProperties%2F-275453720" anchor-label="errorSubtitle" id="-953496636%2FProperties%2F-275453720" data-filterable-set=":microblink-platform:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-platform:dokkaHtml/release" data-filterable-set=":microblink-platform:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="error-subtitle.html"><span>error</span><wbr></wbr><span><span>Subtitle</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-953496636%2FProperties%2F-275453720"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-platform:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="error-subtitle.html">errorSubtitle</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1853347750%2FProperties%2F-275453720" anchor-label="errorTitle" id="1853347750%2FProperties%2F-275453720" data-filterable-set=":microblink-platform:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-platform:dokkaHtml/release" data-filterable-set=":microblink-platform:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="error-title.html"><span>error</span><wbr></wbr><span><span>Title</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1853347750%2FProperties%2F-275453720"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-platform:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="error-title.html">errorTitle</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2074297193%2FProperties%2F-275453720" anchor-label="faceCaptureStatus" id="2074297193%2FProperties%2F-275453720" data-filterable-set=":microblink-platform:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-platform:dokkaHtml/release" data-filterable-set=":microblink-platform:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="face-capture-status.html"><span>face</span><wbr></wbr><span>Capture</span><wbr></wbr><span><span>Status</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2074297193%2FProperties%2F-275453720"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-platform:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="face-capture-status.html">faceCaptureStatus</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-441611903%2FProperties%2F-275453720" anchor-label="homeConditionalWarning" id="-441611903%2FProperties%2F-275453720" data-filterable-set=":microblink-platform:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-platform:dokkaHtml/release" data-filterable-set=":microblink-platform:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="home-conditional-warning.html"><span>home</span><wbr></wbr><span>Conditional</span><wbr></wbr><span><span>Warning</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-441611903%2FProperties%2F-275453720"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-platform:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="home-conditional-warning.html">homeConditionalWarning</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="669727961%2FProperties%2F-275453720" anchor-label="homeStepStatus" id="669727961%2FProperties%2F-275453720" data-filterable-set=":microblink-platform:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-platform:dokkaHtml/release" data-filterable-set=":microblink-platform:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="home-step-status.html"><span>home</span><wbr></wbr><span>Step</span><wbr></wbr><span><span>Status</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="669727961%2FProperties%2F-275453720"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-platform:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="home-step-status.html">homeStepStatus</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2022022131%2FProperties%2F-275453720" anchor-label="homeStepSubtitle" id="2022022131%2FProperties%2F-275453720" data-filterable-set=":microblink-platform:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-platform:dokkaHtml/release" data-filterable-set=":microblink-platform:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="home-step-subtitle.html"><span>home</span><wbr></wbr><span>Step</span><wbr></wbr><span><span>Subtitle</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2022022131%2FProperties%2F-275453720"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-platform:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="home-step-subtitle.html">homeStepSubtitle</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-997225001%2FProperties%2F-275453720" anchor-label="homeStepTitle" id="-997225001%2FProperties%2F-275453720" data-filterable-set=":microblink-platform:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-platform:dokkaHtml/release" data-filterable-set=":microblink-platform:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="home-step-title.html"><span>home</span><wbr></wbr><span>Step</span><wbr></wbr><span><span>Title</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-997225001%2FProperties%2F-275453720"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-platform:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="home-step-title.html">homeStepTitle</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2013886881%2FProperties%2F-275453720" anchor-label="homeSubtitle" id="-2013886881%2FProperties%2F-275453720" data-filterable-set=":microblink-platform:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-platform:dokkaHtml/release" data-filterable-set=":microblink-platform:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="home-subtitle.html"><span>home</span><wbr></wbr><span><span>Subtitle</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2013886881%2FProperties%2F-275453720"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-platform:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="home-subtitle.html">homeSubtitle</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1131453163%2FProperties%2F-275453720" anchor-label="homeTitle" id="1131453163%2FProperties%2F-275453720" data-filterable-set=":microblink-platform:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-platform:dokkaHtml/release" data-filterable-set=":microblink-platform:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="home-title.html"><span>home</span><wbr></wbr><span><span>Title</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1131453163%2FProperties%2F-275453720"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-platform:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="home-title.html">homeTitle</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="830206362%2FProperties%2F-275453720" anchor-label="loadingTitle" id="830206362%2FProperties%2F-275453720" data-filterable-set=":microblink-platform:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-platform:dokkaHtml/release" data-filterable-set=":microblink-platform:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="loading-title.html"><span>loading</span><wbr></wbr><span><span>Title</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="830206362%2FProperties%2F-275453720"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-platform:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="loading-title.html">loadingTitle</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="804569249%2FProperties%2F-275453720" anchor-label="resultSubtitle" id="804569249%2FProperties%2F-275453720" data-filterable-set=":microblink-platform:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-platform:dokkaHtml/release" data-filterable-set=":microblink-platform:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="result-subtitle.html"><span>result</span><wbr></wbr><span><span>Subtitle</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="804569249%2FProperties%2F-275453720"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-platform:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="result-subtitle.html">resultSubtitle</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="830232553%2FProperties%2F-275453720" anchor-label="resultTitle" id="830232553%2FProperties%2F-275453720" data-filterable-set=":microblink-platform:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-platform:dokkaHtml/release" data-filterable-set=":microblink-platform:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="result-title.html"><span>result</span><wbr></wbr><span><span>Title</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="830232553%2FProperties%2F-275453720"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-platform:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="result-title.html">resultTitle</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1540339465%2FProperties%2F-275453720" anchor-label="textButton" id="-1540339465%2FProperties%2F-275453720" data-filterable-set=":microblink-platform:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-platform:dokkaHtml/release" data-filterable-set=":microblink-platform:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="text-button.html"><span>text</span><wbr></wbr><span><span>Button</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1540339465%2FProperties%2F-275453720"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-platform:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="text-button.html">textButton</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
