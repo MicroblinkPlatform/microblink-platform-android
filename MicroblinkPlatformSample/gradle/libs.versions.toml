@@ -1,0 +1,20 @@
+[versions]
+agp = "8.7.3"
+kotlin = "2.1.10"
+navigationCompose = "2.8.9"
+protobuf = "3.20.1"
+blinkidVerifySdkVersion = "3.9.0"
+
+
+[libraries]
+androidx-compose-navigation = { group = "androidx.navigation", name = "navigation-compose", version.ref= "navigationCompose"}
+protobuf-kotlin-lite = { module = "com.google.protobuf:protobuf-kotlin-lite", version.ref = "protobuf" }
+mbp-liveness = { group = "com.microblink.identityverification", name = "mbp-liveness" }
+mbp-core = { group = "com.microblink.identityverification", name = "mbp-core" }
+blinkid-verify-ux = { group = "com.microblink", name = "blinkid-verify-ux", version.ref = "blinkidVerifySdkVersion" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+
