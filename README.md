@@ -77,26 +77,26 @@ To integrate our SDK into your project, follow these steps:
 Check out the sample app for an example of using a TOML version catalog.
 
 ```kotlin
-	implementation(libs.mbp.core) {
-        artifact {
-            type = "aar"
-        }
-    }
+implementation(libs.mbp.core) {
+  artifact {
+    type = "aar"
+  }
+}
 
-    implementation(libs.mbp.liveness) {
-        artifact {
-            type = "aar"
-        }
-    }
+implementation(libs.mbp.liveness) {
+  artifact {
+    type = "aar"
+  }
+}
 
-    // Navigation
-    implementation(libs.androidx.compose.navigation)
+// Navigation
+implementation(libs.androidx.compose.navigation)
 
-    // Protobuf
-    implementation(libs.protobuf.kotlin.lite)
+// Protobuf
+implementation(libs.protobuf.kotlin.lite)
 
-    // BlinkID Verify SDK
-    implementation(libs.blinkid.verify.ux)
+// BlinkID Verify SDK
+implementation(libs.blinkid.verify.ux)
 ```
 
 ## <a name="sdk-flow"></a> SDK flow

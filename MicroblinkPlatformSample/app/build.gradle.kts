@@ -37,6 +37,7 @@ android {
 }
 
 dependencies {
+    implementation(platform(libs.androidx.compose.bom))
 
     implementation(libs.mbp.core) {
         artifact {
