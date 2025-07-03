@@ -92,7 +92,6 @@ class MainActivity : ComponentActivity() {
                     override fun onCardScanned(cardResult: CardScanResult) {
                         Log.e("MainActivity", "Card scanned: ${cardResult.cardNumber}")
                     }
-
                 }
             )
         )
