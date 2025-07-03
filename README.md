@@ -97,6 +97,7 @@ implementation(libs.protobuf.kotlin.lite)
 
 // BlinkID Verify SDK
 implementation(libs.blinkid.verify.ux)
+implementation(libs.blinkcard)
 ```
 
 ## <a name="sdk-flow"></a> SDK flow
@@ -133,7 +134,12 @@ private fun createMbpConfig() = MicroblinkPlatformConfig(
    		// data to be used by Microblink for the improvement of the
    		// fraud detection capabilities in our own products (ie. for training our models).                        
 		isTrainingAllowed = true,
-	)
+	),
+  mbpCardScanResultListener = object : MicroblinkPlatformCardScanResultListener {
+                    override fun onCardScanned(cardResult: CardScanResult) {
+                        Log.e("MainActivity", "Card scanned: ${cardResult.cardNumber}")
+                    }
+                }
     )
 ```
 

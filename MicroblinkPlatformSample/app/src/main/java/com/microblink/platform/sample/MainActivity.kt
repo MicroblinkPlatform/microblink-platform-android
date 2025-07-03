@@ -1,6 +1,7 @@
 package com.microblink.platform.sample
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -13,7 +14,9 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import com.microblink.platform.CardScanResult
 import com.microblink.platform.MicroblinkPlatform
+import com.microblink.platform.MicroblinkPlatformCardScanResultListener
 import com.microblink.platform.MicroblinkPlatformConfig
 import com.microblink.platform.MicroblinkPlatformConsent
 import com.microblink.platform.MicroblinkPlatformResult
@@ -47,7 +50,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    fun startIdentityVerification() {
+    private fun startIdentityVerification() {
         // IMPORTANT: Replace the following values with your own
         val workflowId = "your_workflow_id"
         val hostUrl = "your_host_url"
@@ -56,9 +59,9 @@ class MainActivity : ComponentActivity() {
         MicroblinkPlatform.startVerification(
             activity = this@MainActivity, MicroblinkPlatformConfig(
                 mbpResultListener = object : MicroblinkPlatformResultListener {
-                    override fun onVerificationFinished(result: MicroblinkPlatformResult) {
+                    override fun onVerificationFinished(mbpResult: MicroblinkPlatformResult) {
                         Toast.makeText(
-                            this@MainActivity, "Verification " + when (result.state) {
+                            this@MainActivity, "Verification " + when (mbpResult.state) {
                                 MicroblinkPlatformResult.FinishedState.Accept -> "successful"
                                 MicroblinkPlatformResult.FinishedState.Reject -> "failed"
                                 MicroblinkPlatformResult.FinishedState.Review -> "requires manual review"
@@ -85,6 +88,11 @@ class MainActivity : ComponentActivity() {
                 mbpUiSettings = MicroblinkPlatformUiSettings(
                     // customize the UI if needed
                 ),
+                mbpCardScanResultListener = object : MicroblinkPlatformCardScanResultListener {
+                    override fun onCardScanned(cardResult: CardScanResult) {
+                        Log.e("MainActivity", "Card scanned: ${cardResult.cardNumber}")
+                    }
+                }
             )
         )
     }

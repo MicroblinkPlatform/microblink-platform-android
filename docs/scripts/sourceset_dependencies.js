@@ -1,1 +1,1 @@
-sourceset_dependencies='{":microblink-platform:dokkaHtml/debug":[],":microblink-platform:dokkaHtml/main":[],":microblink-platform:dokkaHtml/release":[]}'
+sourceset_dependencies = '{":microblink-platform:dokkaHtmlPartial/debug":[],":microblink-platform:dokkaHtmlPartial/main":[],":microblink-platform:dokkaHtmlPartial/release":[]}'

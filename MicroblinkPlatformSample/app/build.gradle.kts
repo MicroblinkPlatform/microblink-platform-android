@@ -59,4 +59,5 @@ dependencies {
 
     // Microblink SDK
     implementation(libs.blinkid.verify.ux)
+    implementation(libs.blinkcard)
 }
