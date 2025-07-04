@@ -19,6 +19,7 @@
   * [Changing default strings and localization](#changing-default-strings-and-localization)
      * [Changing strings in the existing language](#changing-existing-string)
      * [Adding new language](#adding-new-language)
+  * [Kotlin documentation](#kotlin-documentation) 
 
 
 ## <a name="quick-start-with-sample-apps"></a> Quick start with sample apps
@@ -262,3 +263,6 @@ To modify an existing string, the best approach would be to:
 
 ### <a name="adding-new-language"></a> Adding new language
 The *Microblink Platform* SDK can easily be translated into other languages. The [`strings.xml`](https://github.com/MicroblinkPlatform/microblink-platform-android/tree/main/strings/strings.xml) contains all the strings used in the *Microblink Platform* library. In order to make e.g. German translation, create a folder `res/values-de` in your project and create a `strings.xml` inside it. Then, open that file and create entries for strings you wish to translate. E.g., for the string `mb_result_done`, you should create an entry like this: `<string name="mb_result_done">Bestätigen</string>`
+
+### <a name="kotlin-documentation"></a> Kotlin documentation
+Kotlin documentation is available [here](https://microblinkplatform.github.io/microblink-platform-android/microblink-platform/com.microblink.platform/index.html).
