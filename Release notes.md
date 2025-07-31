@@ -1,5 +1,17 @@
 # Release notes
 
+## 1.4.0
+### Improvements
+- Face capture now performs additional validation checks:
+	- Eyes closed
+	- Image too dark
+	- Face blurry
+	- Mouth open
+	- Sunglasses detected
+
+- Improved card scanning performance and reliability
+- Enhanced document extraction with additional extracted fields
+
 ## 1.3.0
 ### New features
 - Added support for payment card scan capability:
