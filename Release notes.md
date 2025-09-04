@@ -1,5 +1,9 @@
 # Release notes
 
+## v1.4.1
+### Improvements
+- Improved extraction of first and middle names for certain ID types
+
 ## 1.4.0
 ### Improvements
 - Face capture now performs additional validation checks:
