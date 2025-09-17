@@ -1,5 +1,39 @@
 # Release notes
 
+## 1.4.2
+### Breaking changes
+
+- `MicroblinkPlatformServiceSettings` parameter update
+
+	- The field `hostUrl` has been renamed to `url`.
+
+	- Previously, `hostUrl` accepted only the base domain (e.g. `https://www.myapi.com`).
+
+	- Now, url must include the full API transaction endpoint, for example: `https://www.myapi.com/api/v1/transaction`
+
+
+### Migration Guide
+
+- Before:
+```
+MicroblinkPlatformServiceSettings(
+    workflowId = "myWorkflow",
+    hostUrl = "https://www.myapi.com",
+    consent = consent
+)
+```
+
+- Now:
+```
+MicroblinkPlatformServiceSettings(
+    workflowId = "myWorkflow",
+    url = "https://www.myapi.com/api/v1/transaction",
+    consent = consent
+)
+```
+
+⚠️ This is a breaking change. All integrations must update to use the new url parameter with the full endpoint.
+
 ## v1.4.1
 ### Improvements
 - Improved extraction of first and middle names for certain ID types

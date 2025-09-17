@@ -117,7 +117,7 @@ private fun createMbpConfig() = MicroblinkPlatformConfig(
         mbpServiceSettings = MicroblinkPlatformServiceSettings(
             // IMPORTANT: Replace the following values with your own
             workflowId = "your_workflow_id",
-            hostUrl = "your_host_url",
+            url = "your_url",
             // add your additional request headers if needed, e.g. for authorization
             additionalRequestHeaders = mapOf("Authorization" to "Bearer your_token"),
         ),
@@ -170,7 +170,7 @@ private val mbpResultListener = object : MicroblinkPlatformResultListener {
 In order to use the SDK, you need to define a proxy service which will be used to communicate with the Microblink Platform. This service should be used to forward requests from the SDK to the Microblink Platform and back in order to start the transaction. The service should be implemented on your side and SDK will use it to communicate with the platform.
 
 > [!IMPORTANT]
-> To use our API, you will need an `workflowId` and `hostUrl`.  [Please reach out to us to obtain these credentials](https://microblink.com/contact-us/).
+> To use our API, you will need an `workflowId` and `url`.  [Please reach out to us to obtain these credentials](https://microblink.com/contact-us/).
 
 Make sure that you use a compatible Workflow version for the `Microblink Platform` Android library version that you use.
 
