@@ -53,7 +53,7 @@ class MainActivity : ComponentActivity() {
     private fun startIdentityVerification() {
         // IMPORTANT: Replace the following values with your own
         val workflowId = "your_workflow_id"
-        val hostUrl = "your_host_url"
+        val url = "your_url"
         val userId = "your_user_id"
 
         MicroblinkPlatform.startVerification(
@@ -76,7 +76,7 @@ class MainActivity : ComponentActivity() {
                 },
                 mbpServiceSettings = MicroblinkPlatformServiceSettings(
                     workflowId = workflowId,
-                    hostUrl = hostUrl,
+                    url = url,
                     // add your additional request headers if needed, e.g. for authorization
                     // additionalRequestHeaders = mapOf("Authorization" to "Bearer your_token"),
                     consent = MicroblinkPlatformConsent(
