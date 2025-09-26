@@ -1,4 +1,8 @@
 # Release notes
+## 1.4.2
+### Bugfixes
+- Fixed an issue where the SDK would not update after returning from the document scanning on some older Samsung devices.
+
 
 ## 1.4.2
 ### Breaking changes
