@@ -38,26 +38,5 @@ android {
 
 dependencies {
     implementation(platform(libs.androidx.compose.bom))
-
-    implementation(libs.mbp.core) {
-        artifact {
-            type = "aar"
-        }
-    }
-
-    implementation(libs.mbp.liveness) {
-        artifact {
-            type = "aar"
-        }
-    }
-
-    // Navigation
-    implementation(libs.androidx.compose.navigation)
-
-    // Protobuf
-    implementation(libs.protobuf.kotlin.lite)
-
-    // Microblink SDK
-    implementation(libs.blinkid.verify.ux)
-    implementation(libs.blinkcard)
+    implementation(libs.microblink.platform)
 }

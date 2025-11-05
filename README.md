@@ -56,21 +56,17 @@ android {
 ## <a name="sdk-integration"></a> SDK integration
 To integrate our SDK into your project, follow these steps:
 
-1. **Copy the Library Files**
-	- Copy the `.aar` files from the `libs` folder in this repository into a `libs` folder in your project/module.
-	- Add the following to your `settings.gradle.kts` file to ensure the `.aar` files can be resolved:
+1. **Add Microblink Maven repository**
+	- Add the following to your `settings.gradle.kts` file to ensure the `BlinkCard` depdendency can be resolved:
 	
 		```kotlin
 		dependencyResolutionManagement {
     		repositories {
-       		 flatDir {
-         		   dirs(rootDir.absolutePath + "/../libs")
-       		 	}
+       		         maven { url = uri("https://maven.microblink.com") }
    		 	}
 		}
 		```
-    
-	- Reference these `.aar` files in your `build.gradle.kts` file as shown below.
+    Note: This is only temporary, `BlinkCard` SDK will be soon available on Maven Central too.
 
 2. **Add Required Dependencies**
 	- Include the following dependencies in your `build.gradle.kts` file to ensure proper functionality.
@@ -78,27 +74,7 @@ To integrate our SDK into your project, follow these steps:
 Check out the sample app for an example of using a TOML version catalog.
 
 ```kotlin
-implementation(libs.mbp.core) {
-  artifact {
-    type = "aar"
-  }
-}
-
-implementation(libs.mbp.liveness) {
-  artifact {
-    type = "aar"
-  }
-}
-
-// Navigation
-implementation(libs.androidx.compose.navigation)
-
-// Protobuf
-implementation(libs.protobuf.kotlin.lite)
-
-// BlinkID Verify SDK
-implementation(libs.blinkid.verify.ux)
-implementation(libs.blinkcard)
+implementation("com.microblink:microblink-platform:1.5.0)
 ```
 
 ## <a name="sdk-flow"></a> SDK flow
