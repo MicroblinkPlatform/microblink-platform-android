@@ -17,9 +17,6 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven { url = uri("https://maven.microblink.com") }
-        flatDir {
-            dirs(rootDir.absolutePath + "/../libs")
-        }
     }
 }
 
