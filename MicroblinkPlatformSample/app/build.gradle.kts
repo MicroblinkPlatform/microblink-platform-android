@@ -39,4 +39,9 @@ android {
 dependencies {
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.microblink.platform)
+    configurations.all {
+        resolutionStrategy {
+            force("androidx.compose.material3:material3-android:1.3.2")
+        }
+    }
 }
