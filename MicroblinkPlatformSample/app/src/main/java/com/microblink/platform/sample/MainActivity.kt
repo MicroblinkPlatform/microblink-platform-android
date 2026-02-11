@@ -16,9 +16,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.microblink.platform.CardScanResult
 import com.microblink.platform.MicroblinkPlatform
+import com.microblink.platform.MicroblinkPlatformCancelState
 import com.microblink.platform.MicroblinkPlatformCardScanResultListener
 import com.microblink.platform.MicroblinkPlatformConfig
 import com.microblink.platform.MicroblinkPlatformConsent
+import com.microblink.platform.MicroblinkPlatformProxySettings
 import com.microblink.platform.MicroblinkPlatformResult
 import com.microblink.platform.MicroblinkPlatformResultListener
 import com.microblink.platform.MicroblinkPlatformServiceSettings
@@ -56,6 +58,10 @@ class MainActivity : ComponentActivity() {
         val url = "your_url"
         val userId = "your_user_id"
 
+        // givenOn is the timestamp when the user gave consent, in milliseconds since epoch.
+        // Replace with your own value
+        val givenOn = System.currentTimeMillis()
+
         MicroblinkPlatform.startVerification(
             activity = this@MainActivity, MicroblinkPlatformConfig(
                 mbpResultListener = object : MicroblinkPlatformResultListener {
@@ -69,20 +75,28 @@ class MainActivity : ComponentActivity() {
                         ).show()
                     }
 
-                    override fun onVerificationCanceled() {
-                        Toast.makeText(this@MainActivity, "Verification canceled", Toast.LENGTH_SHORT).show()
+                    override fun onVerificationCanceled(cancelState: MicroblinkPlatformCancelState) {
+                        Toast.makeText(
+                            this@MainActivity, "Verification canceled: " + when (cancelState.cancelReason) {
+                                MicroblinkPlatformCancelState.CancelReason.UserCanceled -> "user canceled"
+                                MicroblinkPlatformCancelState.CancelReason.ConsentDenied -> "consent denied"
+                            }, Toast.LENGTH_SHORT
+                        ).show()
                     }
-
                 },
                 mbpServiceSettings = MicroblinkPlatformServiceSettings(
                     workflowId = workflowId,
-                    url = url,
-                    // add your additional request headers if needed, e.g. for authorization
-                    // additionalRequestHeaders = mapOf("Authorization" to "Bearer your_token"),
+                    proxySettings = MicroblinkPlatformProxySettings(
+                        url = url,
+                        // add your additional request headers if needed, e.g. for authorization
+                        // additionalRequestHeaders = mapOf("Authorization" to "Bearer your_token"),
+                        additionalRequestHeaders = mapOf()
+                    ),
                     consent = MicroblinkPlatformConsent(
                         userId = userId,
                         isTrainingAllowed = true,
-                        isProcessingStoringAllowed = true
+                        isProcessingStoringAllowed = true,
+                        givenOn = givenOn
                     )
                 ),
                 mbpUiSettings = MicroblinkPlatformUiSettings(
