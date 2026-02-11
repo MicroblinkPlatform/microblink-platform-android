@@ -1,5 +1,70 @@
 # Release notes
 
+## v1.7.0
+
+### New features
+
+* **Fallback consent UI**
+
+  If `isProcessingStoringAllowed` in `MicroblinkPlatformConsent` is set to `false`, the SDK will display a built-in consent screen to the user.
+
+  * Users can accept or reject consent directly in the SDK.
+  * If consent is rejected, the session is immediately terminated.
+
+* **Configurable proxy endpoints**
+
+  You can now override individual proxy endpoint paths via `MicroblinkPlatformProxySettings` instead of relying on fixed URLs.
+  This allows greater flexibility when integrating with custom proxy implementations.
+
+
+### Breaking changes
+
+* **`MicroblinkPlatformServiceSettings` structure updated**
+
+  The `url` parameter has been removed and replaced with `proxySettings`.
+
+  * Previously, you provided the full API transaction endpoint directly via `url`, for example:
+    `https://www.myproxy.com/api/v1/transaction`
+  * Now, you must provide proxy configuration via `MicroblinkPlatformProxySettings`, where:
+
+    	* `url` represents your proxy base domain + API suffix, **without** the final endpoint path, for example:
+      `https://www.myproxy.com/api/v1`
+    	* The SDK constructs the full endpoint URLs internally based on the performed action.
+
+* **New `MicroblinkPlatformProxySettings` model introduced**
+
+  Proxy-related configuration is now encapsulated in a dedicated class:
+
+  * `startTransactionPath` (default: `/transaction`)
+  * `cancelWorkflowPath` (default: `/initialize/{workflowId}/cancel`)
+  * `workflowInfoPath` (default: `/initialize/{workflowId}/info`)
+  * `additionalRequestHeaders`
+
+  The `{workflowId}` placeholder is required for cancel and workflow info paths and is validated at runtime.
+
+* **`MicroblinkPlatformConsent` now requires `givenOn` when consent is granted**
+
+  * The new `givenOn` field represents the timestamp (milliseconds since Unix epoch, UTC) when consent was given.
+  * `givenOn` **must** be provided when `isProcessingStoringAllowed` is `true`.
+  * If `isProcessingStoringAllowed` is `false`, `givenOn` may be omitted.
+  
+* **Verification cancellation callback updated**
+ 
+  The result listener callback has been expanded to provide more context about the cancellation.
+
+  * Before:
+    `onVerificationCanceled()`
+  * Now:
+    `onVerificationCanceled(cancelState: MicroblinkPlatformCancelState)`
+
+  The new `MicroblinkPlatformCancelState` includes:
+
+  * optional `transactionId` of the canceled transaction
+  * `cancelReason`, which can be:
+
+    	* `UserCanceled` – the user closed or navigated away from the verification flow
+    	* `ConsentDenied` – the user rejected the consent
+
 ## v1.5.0
 ### What's new
 - We've added kiosk mode support. This is helpful in applications where a tablet device is mounted on a wall, and your users are expected to scan their documents using the front camera only. 
