@@ -74,7 +74,7 @@ To integrate our SDK into your project, follow these steps:
 Check out the sample app for an example of using a TOML version catalog.
 
 ```kotlin
-implementation("com.microblink:microblink-platform:1.5.0)
+implementation("com.microblink:microblink-platform:1.7.0)
 ```
 
 ## <a name="sdk-flow"></a> SDK flow
@@ -93,9 +93,20 @@ private fun createMbpConfig() = MicroblinkPlatformConfig(
         mbpServiceSettings = MicroblinkPlatformServiceSettings(
             // IMPORTANT: Replace the following values with your own
             workflowId = "your_workflow_id",
+            proxySettings = MicroblinkPlatformProxySettings(
+            // Base URL of your proxy (without the final endpoint path), for example "https://www.yourproxy.com/api/v1" 
             url = "your_url",
-            // add your additional request headers if needed, e.g. for authorization
-            additionalRequestHeaders = mapOf("Authorization" to "Bearer your_token"),
+
+            // Optional: override default paths if needed
+            // startTransactionPath = "/transaction",
+            // cancelWorkflowPath = "/initialize/{workflowId}/cancel",
+            // workflowInfoPath = "/initialize/{workflowId}/info",
+
+            // Add your additional request headers if needed, e.g. for authorization
+            additionalRequestHeaders = mapOf(
+                "Authorization" to "Bearer your_token"
+            )
+        ),
         ),
         mbpUiSettings = MicroblinkPlatformUiSettings(
             // customize the UI if needed
@@ -111,6 +122,8 @@ private fun createMbpConfig() = MicroblinkPlatformConfig(
    		// data to be used by Microblink for the improvement of the
    		// fraud detection capabilities in our own products (ie. for training our models).                        
 		isTrainingAllowed = true,
+		// Timestamp (UTC, milliseconds since Unix epoch) when consent was given
+            givenOn = <time_of_consent_collection>
 	),
   mbpCardScanResultListener = object : MicroblinkPlatformCardScanResultListener {
                     override fun onCardScanned(cardResult: CardScanResult) {
@@ -135,10 +148,20 @@ private val mbpResultListener = object : MicroblinkPlatformResultListener {
            	val transactionId = result.transactionId
         }
 
-        override fun onVerificationCanceled() {
-            // Handle verification cancellation
+        override fun onVerificationCanceled(cancelState: MicroblinkPlatformCancelState) {
+        when (cancelState.cancelReason) {
+            MicroblinkPlatformCancelState.CancelReason.UserCanceled -> {
+                // Handle user-initiated cancellation (back navigation or close button)
+            }
+
+            MicroblinkPlatformCancelState.CancelReason.ConsentDenied -> {
+                // Handle cancellation due to denied consent
+            }
         }
 
+        // Optional: use the transaction ID if available
+        val transactionId = cancelState.transactionId
+    }
     }
 ```
 
