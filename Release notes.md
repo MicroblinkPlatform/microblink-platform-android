@@ -26,10 +26,9 @@
   * Previously, you provided the full API transaction endpoint directly via `url`, for example:
     `https://www.myproxy.com/api/v1/transaction`
   * Now, you must provide proxy configuration via `MicroblinkPlatformProxySettings`, where:
-
-    	* `url` represents your proxy base domain + API suffix, **without** the final endpoint path, for example:
+    * `url` represents your proxy base domain + API suffix, **without** the final endpoint path, for example:
       `https://www.myproxy.com/api/v1`
-    	* The SDK constructs the full endpoint URLs internally based on the performed action.
+    * The SDK constructs the full endpoint URLs internally based on the performed action.
 
 * **New `MicroblinkPlatformProxySettings` model introduced**
 
@@ -61,9 +60,8 @@
 
   * optional `transactionId` of the canceled transaction
   * `cancelReason`, which can be:
-
-    	* `UserCanceled` – the user closed or navigated away from the verification flow
-    	* `ConsentDenied` – the user rejected the consent
+    * `UserCanceled` – the user closed or navigated away from the verification flow
+    * `ConsentDenied` – the user rejected the consent
 
 ## v1.5.0
 ### What's new
