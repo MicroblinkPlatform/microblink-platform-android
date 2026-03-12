@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.microblink</groupId>
     <artifactId>microblink-platform</artifactId>
-    <version>1.7.0</version>
+    <version>1.8.0</version>
     <packaging>aar</packaging>
     <name>Microblink Platform SDK for Android</name>
     <description>Microblink Platform Android SDK enables seamless and secure user authentication by integrating advanced identity verification features, such as document scanning, facial recognition, and real-time validation, into your application.</description>
