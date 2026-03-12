@@ -1,5 +1,9 @@
 # Release notes
 
+## v1.8.0
+### New features
+- Added support for overriding `scanUnsupportedBack` and `scanPassportDataPageOnly` on the Scan ID step
+
 ## v1.7.0
 
 ### New features
