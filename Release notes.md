@@ -1,5 +1,9 @@
 # Release notes
 
+## 1.9.0
+### New features
+- Added support for the Upload Non-ID and Upload & Verify ID capabilities
+
 ## v1.8.0
 ### New features
 - Added support for overriding `scanUnsupportedBack` and `scanPassportDataPageOnly` on the Scan ID step
