@@ -17,7 +17,6 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         //mavenLocal()
-        maven { url = uri("https://maven.microblink.com") }
     }
 }
 

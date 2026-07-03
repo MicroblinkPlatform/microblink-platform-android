@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.microblink</groupId>
     <artifactId>microblink-platform</artifactId>
-    <version>1.9.0</version>
+    <version>1.10.0</version>
     <packaging>aar</packaging>
     <name>Microblink Platform SDK for Android</name>
     <description>Microblink Platform Android SDK enables seamless and secure user authentication by integrating advanced identity verification features, such as document scanning, facial recognition, and real-time validation, into your application.</description>
@@ -101,14 +101,14 @@
         </dependency>
         <dependency>
             <groupId>com.microblink</groupId>
-            <artifactId>blinkcard</artifactId>
-            <version>2.12.0</version>
+            <artifactId>blinkcard-ux</artifactId>
+            <version>3000.0.1</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>com.microblink</groupId>
             <artifactId>blinkid-verify-ux</artifactId>
-            <version>3.14.1</version>
+            <version>3.21.0</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
