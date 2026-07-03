@@ -1,5 +1,15 @@
 # Release notes
 
+## v1.10.0
+### Updates
+
+We've updated our **BlinkID Verify** and **BlinkCard** dependencies:
+
+- The Scan & Verify ID capability now uses BlinkID Verify v3.21.0.
+- The Scan Payment Card capability now uses BlinkCard v3000.0.1.
+
+To read more about the new features supported by these upgrades, see the release notes for [BlinkID Verify](https://docs.microblink.com/verify/release-notes#version-3210) and [BlinkCard](https://docs.microblink.com/blinkcard/release-notes#v300000).
+
 ## 1.9.0
 ### New features
 - Added support for the Upload Non-ID and Upload & Verify ID capabilities

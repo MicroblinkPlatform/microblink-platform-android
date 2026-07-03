@@ -54,27 +54,12 @@ android {
 ```
 
 ## <a name="sdk-integration"></a> SDK integration
-To integrate our SDK into your project, follow these steps:
-
-1. **Add Microblink Maven repository**
-	- Add the following to your `settings.gradle.kts` file to ensure the `BlinkCard` depdendency can be resolved:
-	
-		```kotlin
-		dependencyResolutionManagement {
-    		repositories {
-       		         maven { url = uri("https://maven.microblink.com") }
-   		 	}
-		}
-		```
-    Note: This is only temporary, `BlinkCard` SDK will be soon available on Maven Central too.
-
-2. **Add Required Dependencies**
-	- Include the following dependencies in your `build.gradle.kts` file to ensure proper functionality.
+To integrate our SDK into your project just add the dependency in your `build.gradle.kts`:
 
 Check out the sample app for an example of using a TOML version catalog.
 
 ```kotlin
-implementation("com.microblink:microblink-platform:1.7.0)
+implementation("com.microblink:microblink-platform:1.10.0)
 ```
 
 ## <a name="sdk-flow"></a> SDK flow
